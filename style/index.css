@@ -53,49 +53,71 @@ table {
 
 
 *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+html{
+    font-size: 62.5%;
     font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: #FFDE83;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+header{
+    background-color: #D8AA2D;
+}
+
+header, section{
+    padding: 4% 0;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    font-size: 3.2rem;
-    background-color: #D8AA2D;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .topsection{
-    display: flex;
-    justify-content: center;
     background-color: #FFDE83;
-}
-
-.image-button{
     background-image: url("https://picsum.photos/600/400");
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
-    font-size: 3.2rem;
-    width: 600px;
-    height: 400px;
-    padding: 5px 5px;
-    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
 }
 
+
 footer{
-    background-color: lightgray;
+    
     padding: 20px;
     text-align: center;
     background-color: #D8AA2D;
 }
 
+
 .row{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 20px;
     background-color: #FFDE83;
-    font-family: 'Open Sans', sans-serif;
+}
+
+.row div{
+    width: 30%;
+    margin: 2% 0;
 }
 
 .portfolio-element{
@@ -103,12 +125,13 @@ footer{
 }
 
 button{
+    /* background-color: #FFDE83; */
     background-color: #FFDE83;
     color: black;
     border: black solid 1px;
     padding: 5px 10px;
     font-size: 2rem;
-    font-family: 'Open Sans', sans-serif;
+    
 }
 
 button:hover{
@@ -120,5 +143,60 @@ button:hover{
 button a{
     text-decoration: none;
     color: inherit;
+}
+
+@media(max-width: 800px) {
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .links button{
+        width: 40%;
+        margin: 1% 0;
+    }
+
+    .topsection{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .row div{
+        width: 40%;
+    }
+}
+
+@media(max-width: 500px) {
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .links button{
+        width: 40%;
+        margin: 1% 0;
+    }
+
+    .topsection{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .row div{
+        width: 40%;
+    }
+
 }
 
